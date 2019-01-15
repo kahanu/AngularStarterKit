@@ -5,6 +5,10 @@ import { environment } from '../../environments/environment';
 import { ExceptionService } from './services/exception.service';
 import { catchError } from 'rxjs/operators';
 
+/**
+ * All RESTful service classes should extend this base class to
+ * inherit the basic CRUD operations.
+ */
 export abstract class HttpBase<T extends Entity | any> {
   url: string;
 
