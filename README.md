@@ -2,6 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
 
+## Demo Site
+[Angular Starter Kit Demo Site](https://kahanu.github.io/AngularStarterKit/)
+
 ## What is this?
 
 This can be used to construct your new base Angular project.  It follows good Angular conventions in layout and structure for components and modules as suggested by the Angular docs.
