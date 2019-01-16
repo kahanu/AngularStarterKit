@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  Api: ''
+  Api: 'https://kahanu.github.io/angularstarterkit/assets/api/'
 };
