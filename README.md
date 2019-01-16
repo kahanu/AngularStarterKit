@@ -7,15 +7,15 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## What is this?
 
-This can be used to construct your new base Angular project.  It follows good Angular conventions in layout and structure for components and modules as suggested by the Angular docs.
+This can be used as the basis for your new base Angular project.  It follows good Angular conventions in layout and structure for components and modules as suggested by the Angular docs.
 
-This will save you time in creating the `shared` and `core` folders which should be in every Angular app.  It also has an `HttpBase` class in the services folder that provides all the plumbing for the basic CRUD operations with your RESTful service calls.
+This will save you time in creating the `shared` and `core` folders which should be in every Angular app, as described in the [Angular Docs](https://angular.io/guide/ngmodule-faq#what-kinds-of-modules-should-i-have-and-how-should-i-use-them).  It also has an `HttpBase` class in the services folder that provides all the plumbing for the basic CRUD operations with your RESTful service calls.
 
 This project does not contain any additional `npm` packages over the normal packages added by the Angular CLI when creating a new project.
 
 ## Run It
 
-After you download it, you can run it after installing the npm packages.  In the folder with the starter kit, open the terminal and enter:
+After you download it, install the npm packages.  In the folder with the starter kit, open the terminal and enter:
 
 ```javascript
 npm install
@@ -121,8 +121,6 @@ export * from './entity.ts';
 
 Now in the file that will reference these other files, you can import them like this:
 
-`Customer Component`
-
 ```javascript
 import { Customer, ResponseBase, Entity } from './shared/models';
 
@@ -136,4 +134,4 @@ export class CustomerComponent {
 
 You don't need to add the `index` to the path like, `'./shared/models/index'`.  The `index` reference is similar to the `index.html` page being the default document of a website, the `index.ts` file is the default file in a folder and does not have to be referenced.
 
-2. **Modules** - whenever you can, group like files in a module.  This way you just need to import/export this module in another file like the SharedModule or AppModule to register it with the app.
+2. **Models** - When models are shared throughout the application, put them in a `shared/models` folder, and then add them to the `index.ts` barrel file.
