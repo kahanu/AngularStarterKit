@@ -100,7 +100,7 @@ export * from './entity.ts';
 
 Now in the file that will reference these other files, you can import them like this:
 
-````Customer Component````
+`Customer Component`
 
 ```javascript
 import { Customer, ResponseBase, Entity } from './shared/models';
@@ -112,5 +112,7 @@ export class CustomerComponent {
 
 }
 ```
+
+You don't need to add the `index` to the path like, `'./shared/models/index'`.  The `index` reference is similar to the `index.html` page being the default document of a website, the `index.ts` file is the default file in a folder and does not have to be referenced.
 
 2. **Modules** - whenever you can, group like files in a module.  This way you just need to import/export this module in another file like the SharedModule or AppModule to register it with the app.
