@@ -11,7 +11,7 @@ import { map } from 'rxjs/operators';
 })
 export class HomeComponent implements OnInit {
 
-  customers: Observable<Customer[]>;
+  customers$: Observable<Customer[]>;
 
   constructor(private customerService: CustomerService) { }
 
@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
   }
 
   loadCustomers() {
-    this.customers = this.customerService.getAll('customers.json')
+    this.customers$ = this.customerService.getAll()
       .pipe(map(response => response.data as Customer[]));
   }
 

@@ -14,9 +14,14 @@ export abstract class HttpBase<T extends Entity | any> {
 
   constructor(
     protected http: HttpClient,
-    protected exceptionService: ExceptionService
+    protected exceptionService: ExceptionService,
+    protected resourceName: string
   ) {
     this.url = environment.Api;
+
+    if (resourceName && typeof(resourceName === 'string') && resourceName.trim().length > 0) {
+      this.url = this.url.concat(resourceName.trim());
+    }
   }
 
   /**
@@ -24,7 +29,7 @@ export abstract class HttpBase<T extends Entity | any> {
    * which can contain any type of data.
    * @param path the path to the resource
    */
-  getAll(path: string): Observable<ResponseBase> {
+  getAll(path: string = ''): Observable<ResponseBase> {
     const Url = this.url.concat(path);
 
     return this.http.get<ResponseBase>(Url)
@@ -36,7 +41,7 @@ export abstract class HttpBase<T extends Entity | any> {
    * @param id the id to the resource
    * @param path the path to the resource
    */
-  getById(id: any, path: string) {
+  getById(id: any, path: string = '') {
     let Url = this.url.concat(path);
     Url = this.stripTrailingSlash(Url);
 
@@ -49,13 +54,13 @@ export abstract class HttpBase<T extends Entity | any> {
    * @param entity the entity to delete
    * @param path the path to the resource
    */
-  delete(entity: T, path: string) {
+  delete(entity: T, path: string = '') {
     let Url = this.url.concat(path);
     Url = this.stripTrailingSlash(Url);
 
     const id = entity.Id;
 
-    return this.http.delete<T>(`${Url}/${id}`)
+    return this.http.delete<ResponseBase>(`${Url}/${id}`)
       .pipe(catchError(this.exceptionService.catchBadResponse));
   }
 
@@ -64,7 +69,7 @@ export abstract class HttpBase<T extends Entity | any> {
    * @param data the data to save of any type
    * @param path the path to the resource
    */
-  save(data: any, path: string) {
+  save(data: any, path: string = '') {
     const Url = this.url.concat(path);
 
     const payload = JSON.stringify(data);
