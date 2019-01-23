@@ -12,6 +12,13 @@ import { catchError } from 'rxjs/operators';
 export abstract class HttpBase<T extends Entity | any> {
   url: string;
 
+  /**
+   * The abstract http base class to be implemented by concrete service classes.
+   * @param http The Angular HttpClient
+   * @param exceptionService The Exception Service
+   * @param resourceName The name of the resource part of the end point, such as 'customers' in /api/customers.
+   * Or it could point to a local json file, '/assets/api/customers.json'.
+   */
   constructor(
     protected http: HttpClient,
     protected exceptionService: ExceptionService,
