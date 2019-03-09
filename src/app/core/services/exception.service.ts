@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
 
 @Injectable({
@@ -12,9 +12,9 @@ export class ExceptionService {
   catchBadResponse: (errorResponse: any) => Observable<any> = (errorResponse: any) => {
     const res = <HttpErrorResponse>errorResponse;
     if (res.status === 404) {
-      return Observable.throw('The web service was not found.');
+      return throwError('The web service was not found.');
     }
 
-    return Observable.throw(res.statusText);
+    return throwError(res.statusText);
   }
 }

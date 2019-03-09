@@ -2,7 +2,7 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-const LOCALHOST = 'http://localhost:4200/assets/api/';
+const LOCALHOST = 'http://localhost:4200/assets/api/'; // This would normally point to your local or remote Api.
 
 export const environment = {
   production: false,
