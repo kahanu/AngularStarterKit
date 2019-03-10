@@ -1,5 +1,5 @@
 {
-  "name": "angular-starter-kit",
+  "name": "golftracker-angular-ngrx",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -9,9 +9,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build --prod --base-href /AngularStarterKit/ && gh-pages -d dist/AngularStarterKit"
+    "deploy": "ng build --prod --base-href /GolfTracker.Angular.Ngrx/ && gh-pages -d dist/GolfTracker.Angular.Ngrx"
   },
-  "homepage": "https://kahanu.github.io/AngularStarterKit/",
+  "homepage": "https://kahanu.github.io/GolfTracker.Angular.Ngrx/",
   "private": true,
   "dependencies": {
     "@angular/animations": "~7.1.0",
