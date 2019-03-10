@@ -11,7 +11,7 @@ export class PrimaryNavComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.title = 'GolfTracker Angular Ngrx';
+    this.title = 'Angular Starter Kit';
   }
 
 }
