@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
   }
 
   loadCustomers() {
-    this.customers$ = this.customerService.getAll()
+    this.customers$ = this.customerService.getAll('../../assets/api/customers.json')
       .pipe(map(response => response.data as Customer[]));
   }
 

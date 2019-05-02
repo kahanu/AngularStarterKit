@@ -12,7 +12,7 @@ export class CustomerService extends HttpBase<Customer> {
     protected http: HttpClient,
     protected exceptionService: ExceptionService
   ) {
-    super(http, exceptionService, 'customers.json');
+    super(http, exceptionService);
   }
 
   /** Add any custom service methods here. */
