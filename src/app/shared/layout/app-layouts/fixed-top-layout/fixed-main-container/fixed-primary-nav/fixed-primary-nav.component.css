@@ -1,6 +1,10 @@
 .fixed-primary-nav-wrapper {
+  position: absolute;
+  top: 56px;
+  left: 0;
   display: block;
   width: 249px;
-  height: 100%;
+  height: calc(100% - 56px);
   background-color: brown;
+  transition: 0.3s;
 }

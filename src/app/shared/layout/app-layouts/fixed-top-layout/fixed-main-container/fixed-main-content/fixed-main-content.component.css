@@ -1,3 +1,5 @@
-.container-fluid {
+.container-fluidy {
   margin-left: 250px;
+  padding-left: 20px;
+  transition: 0.3s;
 }
