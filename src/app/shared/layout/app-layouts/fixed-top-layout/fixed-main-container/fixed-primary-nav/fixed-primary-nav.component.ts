@@ -7,7 +7,7 @@ import { PubSubService } from 'src/app/core/services/pub-sub.service';
   styleUrls: ['./fixed-primary-nav.component.css']
 })
 export class FixedPrimaryNavComponent implements OnInit {
-  @ViewChild('fixedPrimaryNav') public fixedPrimaryNav: ElementRef<HTMLDivElement>;
+  @ViewChild('fixedPrimaryNav', { static: true }) public fixedPrimaryNav: ElementRef<HTMLDivElement>;
   isOpen = true;
 
   constructor(private pubSub: PubSubService) { }

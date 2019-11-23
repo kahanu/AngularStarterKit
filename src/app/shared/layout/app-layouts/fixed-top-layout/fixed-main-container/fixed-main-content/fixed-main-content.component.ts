@@ -7,7 +7,7 @@ import { PubSubService } from 'src/app/core/services/pub-sub.service';
   styleUrls: ['./fixed-main-content.component.css']
 })
 export class FixedMainContentComponent implements OnInit {
-  @ViewChild('mainContent') public mainContent: ElementRef<HTMLDivElement>;
+  @ViewChild('mainContent', { static: true }) public mainContent: ElementRef<HTMLDivElement>;
   isOpen = true;
 
   constructor(private pubSub: PubSubService) { }
@@ -21,9 +21,9 @@ export class FixedMainContentComponent implements OnInit {
 
   toggleContentWidth(state: boolean) {
     if (state) {
-      this.mainContent.nativeElement.style.marginLeft = '250px';
+      this.mainContent.nativeElement.style.marginLeft = '270px';
     } else {
-      this.mainContent.nativeElement.style.marginLeft = '20px';
+      this.mainContent.nativeElement.style.marginLeft = '40px';
     }
   }
 

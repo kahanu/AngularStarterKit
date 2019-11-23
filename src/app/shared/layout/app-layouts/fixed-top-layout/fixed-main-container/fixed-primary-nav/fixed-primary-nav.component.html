@@ -1,5 +1,37 @@
-<div class="fixed-primary-nav-wrapper" #fixedPrimaryNav (click)="toggleNav()">
-  <p>
-    fixed-primary-nav works!
-  </p>
+<div class="fixed-primary-nav-wrapper" #fixedPrimaryNav>
+  <ul>
+    <li>
+      <a>
+        <fa-icon [icon]="['fas', 'home']"></fa-icon>
+        Home</a
+      >
+    </li>
+    <li>
+      <a>
+        <fa-icon [icon]="['fas', 'user']"></fa-icon>
+        Customers
+      </a>
+    </li>
+    <li>
+      <a>
+        <fa-icon [icon]="['fas', 'info']"></fa-icon>
+        Info
+      </a>
+    </li>
+    <li>
+      <a>
+        <fa-icon [icon]="['fas', 'tools']"></fa-icon>
+        Settings
+      </a>
+    </li>
+    <li>
+      <a>
+        <fa-icon [icon]="['fas', 'question']"></fa-icon>
+        Help
+      </a>
+    </li>
+  </ul>
+  <div class="handle" (click)="toggleNav()">
+
+  </div>
 </div>
