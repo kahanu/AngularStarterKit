@@ -17,7 +17,7 @@ export class FixedPrimaryNavComponent implements OnInit {
 
   toggleNav() {
     if (this.isOpen) {
-      this.fixedPrimaryNav.nativeElement.style.marginLeft = '-220px';
+      this.fixedPrimaryNav.nativeElement.style.marginLeft = '-250px';
       this.isOpen = false;
     } else {
       this.fixedPrimaryNav.nativeElement.style.marginLeft = '0';
