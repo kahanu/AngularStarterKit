@@ -1,8 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Customer } from '../shared/models';
-import { CustomerService } from '../core/services/customer.service';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-home',
@@ -11,17 +7,9 @@ import { map } from 'rxjs/operators';
 })
 export class HomeComponent implements OnInit {
 
-  customers$: Observable<Customer[]>;
-
-  constructor(private customerService: CustomerService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.loadCustomers();
-  }
-
-  loadCustomers() {
-    this.customers$ = this.customerService.getAll('../../assets/api/customers.json')
-      .pipe(map(response => response.data as Customer[]));
   }
 
 }
