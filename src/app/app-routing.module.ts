@@ -28,11 +28,21 @@ const routes: Routes = [
         path: 'settings',
         loadChildren: () =>
           import('./settings/settings.module').then(m => m.SettingsModule)
+      },
+      {
+        path: 'help',
+        loadChildren: () =>
+          import('./help/help.module').then(m => m.HelpModule)
       }
     ]
   },
   {
     path: 'home',
+    component: FixedTopLayoutComponent,
+    loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+  },
+  {
+    path: '**',
     component: FixedTopLayoutComponent,
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
   }
