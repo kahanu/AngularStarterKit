@@ -10,6 +10,7 @@ import { FixedMainContainerComponent } from './app-layouts/fixed-top-layout/fixe
 import { FixedMainContentComponent } from './app-layouts/fixed-top-layout/fixed-main-container/fixed-main-content/fixed-main-content.component';
 // tslint:disable-next-line:max-line-length
 import { FixedPrimaryNavComponent } from './app-layouts/fixed-top-layout/fixed-main-container/fixed-primary-nav/fixed-primary-nav.component';
+import { AccountModule } from 'src/app/account/account.module';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,6 @@ import { FixedPrimaryNavComponent } from './app-layouts/fixed-top-layout/fixed-m
     FixedMainContainerComponent,
     FixedMainContentComponent
   ],
-  imports: [SharedModule, RouterModule]
+  imports: [SharedModule, RouterModule, AccountModule]
 })
 export class LayoutModule {}

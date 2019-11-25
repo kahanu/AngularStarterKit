@@ -1,0 +1,12 @@
+<div [ngSwitch]="isLoggedIn">
+  <div *ngSwitchCase="true">
+    <div (click)="toggleStatus()">
+      Log off
+    </div>
+  </div>
+  <div *ngSwitchCase="false">
+    <div (click)="toggleStatus()">
+      Sign In
+    </div>
+  </div>
+</div>
