@@ -1,5 +1,10 @@
 
 .dropdown-menu {
   top: 50px;
-  left: -160px;
+  left: -120px;
+}
+
+.dropdown-item fa-icon {
+  width: 20px;
+  display: inline-block;
 }
