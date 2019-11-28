@@ -7,10 +7,13 @@ import { FixedTopLayoutComponent } from './app-layouts/fixed-top-layout/fixed-to
 import { FixedTopComponent } from './app-layouts/fixed-top-layout/fixed-top/fixed-top.component';
 import { FixedMainContainerComponent } from './app-layouts/fixed-top-layout/fixed-main-container/fixed-main-container.component';
 // tslint:disable-next-line: max-line-length
-import { FixedMainContentComponent } from './app-layouts/fixed-top-layout/fixed-main-container/fixed-main-content/fixed-main-content.component';
+import { FixedMainContentComponent } from './app-layouts/fixed-top-layout/fixed-main-content/fixed-main-content.component';
 // tslint:disable-next-line:max-line-length
-import { FixedPrimaryNavComponent } from './app-layouts/fixed-top-layout/fixed-main-container/fixed-primary-nav/fixed-primary-nav.component';
+import { FixedPrimaryNavComponent } from './app-layouts/fixed-top-layout/fixed-primary-nav/fixed-primary-nav.component';
 import { AccountModule } from 'src/app/account/account.module';
+import { FixedSettingsContainerComponent } from './app-layouts/fixed-top-layout/fixed-settings-container/fixed-settings-container.component';
+import { FixedSettingsNavComponent } from './app-layouts/fixed-top-layout/fixed-settings-nav/fixed-settings-nav.component';
+import { FixedSettingsLayoutComponent } from './app-layouts/fixed-top-layout/fixed-settings-layout/fixed-settings-layout.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { AccountModule } from 'src/app/account/account.module';
     FixedTopComponent,
     FixedPrimaryNavComponent,
     FixedMainContainerComponent,
-    FixedMainContentComponent
+    FixedMainContentComponent,
+    FixedSettingsContainerComponent,
+    FixedSettingsNavComponent,
+    FixedSettingsLayoutComponent
   ],
   imports: [SharedModule, RouterModule, AccountModule]
 })

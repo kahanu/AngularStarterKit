@@ -1,0 +1,51 @@
+.fixed-settings-nav-wrapper {
+  position: absolute;
+  top: 56px;
+  left: 0;
+  display: block;
+  width: 249px;
+  height: calc(100% - 56px);
+  background-color: rgb(245, 245, 245);
+  transition: 0.3s;
+  box-shadow: 1px 2px 4px rgba(0,0,0,0.3);
+  box-sizing: border-box;
+}
+
+.fixed-settings-nav-wrapper ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 20px;
+}
+
+.fixed-settings-nav-wrapper ul li a {
+  color: rgb(24, 24, 179);
+  text-decoration: unset;
+}
+
+.fixed-settings-nav-wrapper ul li a fa-icon {
+  width: 25px;
+  display: inline-block;
+  text-align: center;
+}
+
+.fixed-settings-nav-wrapper ul li {
+  padding: 10px 10px 10px 20px;
+  cursor: pointer;
+}
+
+.fixed-settings-nav-wrapper ul li:hover {
+  background-color: rgb(221, 221, 221);;
+}
+
+.handle {
+  position: absolute;
+  top: 50%;
+  left: 260px;
+  /* width: 25px;
+  height: 75px;
+  background-color: #dedede; */
+  transform: translateY(-50%);
+  font-size: 2.6em;
+}
+
